@@ -17,4 +17,8 @@ public class Zoo {
         return animals.isEmpty();
     }
 
+    public int getZooSize() {
+        return zooSize;
+    }
+
 }
