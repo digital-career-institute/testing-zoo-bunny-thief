@@ -38,4 +38,10 @@ public class Zoo {
         return animalList.substring(0, animalList.length() - 2);
     }
 
+    public String checkFreeSpace() {
+        return animals.size() < getZooSize() ?
+                String.format("The zoo has %d free spaces!", getZooSize() - animals.size()) :
+                "The zoo is full!";
+    }
+
 }
