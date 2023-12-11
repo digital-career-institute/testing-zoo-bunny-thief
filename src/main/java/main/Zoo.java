@@ -21,4 +21,8 @@ public class Zoo {
         return zooSize;
     }
 
+    public void add(Animal animal) {
+        animals.add(animal);
+    }
+
 }
