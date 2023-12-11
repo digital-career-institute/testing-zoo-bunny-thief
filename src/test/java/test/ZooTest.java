@@ -51,4 +51,21 @@ public class ZooTest {
         assertNotEquals(expected, actual);
     }
 
+    @Test
+    void listAnimalsOneAnimalTest() {
+        String expected = "Bear";
+        zoo.add(new Animal("Bear"));
+        String actual = zoo.listAnimals();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void listAnimalsTwoAnimalsTest() {
+        String expected = "Bear, Monkey";
+        zoo.add(new Animal("Bear"));
+        zoo.add(new Animal("Monkey"));
+        String actual = zoo.listAnimals();
+        assertEquals(expected, actual);
+    }
+
 }
