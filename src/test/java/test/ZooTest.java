@@ -1,10 +1,10 @@
 package test;
 
+import main.Animal;
 import main.Zoo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -40,6 +40,14 @@ public class ZooTest {
     void zooIsCorrectSizeTest(int arguments) {
         int expected = arguments;
         int actual = new Zoo(5).getZooSize();
+        assertNotEquals(expected, actual);
+    }
+
+    @Test
+    void addAnimalTest() {
+        boolean expected = true;
+        zoo.add(new Animal("Lion"));
+        boolean actual = zoo.zooIsEmpty();
         assertNotEquals(expected, actual);
     }
 
