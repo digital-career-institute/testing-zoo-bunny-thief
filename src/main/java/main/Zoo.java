@@ -21,8 +21,12 @@ public class Zoo {
         return zooSize;
     }
 
-    public void add(Animal animal) {
-        animals.add(animal);
+    public boolean add(Animal animal) {
+        if (animals.size() < zooSize) {
+            animals.add(animal);
+            return true;
+        }
+        return false;
     }
 
     public String listAnimals() {
