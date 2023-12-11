@@ -25,4 +25,13 @@ public class Zoo {
         animals.add(animal);
     }
 
+    public String listAnimals() {
+        String animalList = "";
+        animals.sort((animal1, animal2) -> animal1.getName().compareTo(animal2.getName()));
+        for (Animal animal : animals) {
+            animalList += animal.getName() + ", ";
+        }
+        return animalList.substring(0, animalList.length() - 2);
+    }
+
 }
