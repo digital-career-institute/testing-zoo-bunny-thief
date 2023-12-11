@@ -68,4 +68,25 @@ public class ZooTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    void addThreeAnimalsTest() {
+        boolean expected = true;
+        Zoo zoo = new Zoo(3);
+        zoo.add(new Animal("Bear"));
+        zoo.add(new Animal("Monkey"));
+        boolean actual = zoo.add(new Animal("Tiger"));
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void stopAddingAnimalsTest() {
+        boolean expected = false;
+        Zoo zoo = new Zoo(3);
+        zoo.add(new Animal("Bear"));
+        zoo.add(new Animal("Monkey"));
+        zoo.add(new Animal("Tiger"));
+        boolean actual = zoo.add(new Animal("Zebra"));
+        assertEquals(expected, actual);
+    }
+
 }
